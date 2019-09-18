@@ -20,8 +20,8 @@ let getPokemonData = async ()=>{
     pokemonHeight.innerText = `La altura es: ${height} pulgadas`;
     pokemonWeight.innerText = `Su peso es de: ${pokemon.weight}kg`
     pokemonFrontImg.src = frontImg;
-    abilities.forEach(ability => {
-        pokemonAbilities.innerHTML = `<li>${ability.name}</li>`;
+    abilities.forEach(element => {
+        pokemonAbilities.innerHTML = `<li>${element.ability.name}</li>`;
     });
     
 };
