@@ -15,8 +15,9 @@ let getPokemonAbilityData = async url=>{
     const responses = await fetch(url);
     const abilityData = await responses.json();
     return abilityData;
-
 }
+
+
 
 let getPokemonData = async ()=>{
     const response = await fetch(`${pokemonApiUrl}pokemon/393/`);
@@ -43,6 +44,7 @@ let getPokemonData = async ()=>{
                 </ul>
             </div>
         </li>`
+        console.log(element.ability.name);
         //pokemonAbilities.innerHTML += `<li>${element.ability.name}</li>`;
         //pokemonAbilitiesApi.innerHTML += `<li>${element.ability.url}</li>`;
         //console.log(element.ability);
