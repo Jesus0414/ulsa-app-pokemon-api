@@ -4,6 +4,7 @@ const pokemonFrontImg = document.getElementById('pokemon-img-front');
 const pokemonNumber = document.getElementById('pokemon-number');
 const pokemonWeight = document.getElementById('pokemon-weight');
 const pokemonAbilities = document.getElementById('pokemon-abilities'); 
+const pokemonId = document.getElementById('pokemon-id').value;
 //const pokemonAbilitiesApi = document.getElementById('pokemon-abilities-api'); 
 
 pokemonName.innerText = 'El nombre de mi pokémon es: ';
@@ -20,7 +21,7 @@ let getPokemonAbilityData = async url=>{
 
 
 let getPokemonData = async ()=>{
-    const response = await fetch(`${pokemonApiUrl}pokemon/393/`);
+    const response = await fetch(`${pokemonApiUrl}pokemon/${pokemon}/`);
     const pokemon = await response.json();
     console.log(pokemon);
     const {name , height, abilities}= pokemon;
